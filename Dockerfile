@@ -6,3 +6,5 @@ ADD target/dockerfile-demo.jar dockerfile-demo.jar
 EXPOSE 8080
 
 ENTRYPOINT ["java","-jar","dockerfile-demo.jar"]
+
+//access the browser-url/test-docker
