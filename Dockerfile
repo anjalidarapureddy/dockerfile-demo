@@ -1,4 +1,8 @@
-FROM jdk:8
-COPY ${JAR_FILE} app.jar
+
+FROM openjdk:17.0.2
+
+ADD target/dockerfile-demo.jar dockerfile-demo.jar
+
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"
+
+ENTRYPOINT ["java","-jar","dockerfile-demo.jar"]
