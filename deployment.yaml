@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-java-project
+  labels:
+    app: javaproject
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: javaproject
+  template:
+    metadata:
+      labels:
+        app: javaproject
+    spec:
+      containers:
+      - name: javaproject
+        image: darapureddy87/anjali_javaproject:v1.0.0
+        ports:
+        - containerPort: 8080
